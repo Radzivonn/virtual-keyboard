@@ -27,7 +27,11 @@ module.exports = ({ development }) => ({
     assetModuleFilename: 'assets/[hash][ext]',
   },
   module: {
-    rules: [
+		rules: [
+			{
+				test: /\.html$/i,
+				loader: 'html-loader'
+			},
       {
         test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
         type: 'asset/resource',
