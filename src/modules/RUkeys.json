@@ -151,7 +151,7 @@
 		"shift": "/"
 	},
 	{
-		"key": "Delete",
+		"key": "Del",
 		"code": "Delete"
 	},
 	{
@@ -300,11 +300,11 @@
 		"code": "ShiftRight"
 	},
 	{
-		"key": "Control",
+		"key": "Ctrl",
 		"code": "ControlLeft"
 	},
 	{
-		"key": "Meta",
+		"key": "Win",
 		"code": "MetaLeft"
 	},
 	{
@@ -320,15 +320,7 @@
 		"code": "AltRight"
 	},
 	{
-		"key": "Meta",
-		"code": "MetaRight"
-	},
-	{
-		"key": "Control",
-		"code": "ControlRight"
-	},
-	{
-		"key": "&#9658;",
+		"key": "&#9668;",
 		"code": "ArrowLeft"
 	},
 	{
@@ -338,5 +330,9 @@
 	{
 		"key": "&#9658;",
 		"code": "ArrowRight"
-	}
+	},
+	{
+		"key": "Ctrl",
+		"code": "ControlRight"
+	}	
 ]
