@@ -1,0 +1,334 @@
+[
+	{
+		"key": "`",
+		"code": "Backquote"
+	},
+	{
+		"key": "1",
+		"code": "Digit1",
+		"shift": "!"
+	},
+	{
+		"key": "2",
+		"code": "Digit2",
+		"shift": "@"
+	},
+	{
+		"key": "3",
+		"code": "Digit3",
+		"shift": "#"
+	},
+	{
+		"key": "4",
+		"code": "Digit4",
+		"shift": "$"
+	},
+	{
+		"key": "5",
+		"code": "Digit5",
+		"shift": "%"
+	},
+	{
+		"key": "6",
+		"code": "Digit6",
+		"shift": "^"
+	},
+	{
+		"key": "7",
+		"code": "Digit7",
+		"shift": "&"
+	},
+	{
+		"key": "8",
+		"code": "Digit8",
+		"shift": "*"
+	},
+	{
+		"key": "9",
+		"code": "Digit9",
+		"shift": "("
+	},
+	{
+		"key": "0",
+		"code": "Digit0",
+		"shift": ")"
+	},
+	{
+		"key": "-",
+		"code": "Minus",
+		"shift": "_"
+	},
+	{
+		"key": "=",
+		"code": "Equal",
+		"shift": "+"
+	},
+	{
+		"key": "Backspace",
+		"code": "Backspace"
+	},
+	{
+		"key": "Tab",
+		"code": "Tab"
+	},
+	{
+		"key": "q",
+		"code": "KeyQ",
+		"caps": "Q",
+		"shift": "Q"
+	},
+	{
+		"key": "w",
+		"code": "KeyW",
+		"caps": "W",
+		"shift": "W"
+	},
+	{
+		"key": "e",
+		"code": "KeyE",
+		"caps": "E",
+		"shift": "E"
+	},
+	{
+		"key": "r",
+		"code": "KeyR",
+		"caps": "R",
+		"shift": "R"
+	},
+	{
+		"key": "t",
+		"code": "KeyT",
+		"caps": "T",
+		"shift": "T"
+	},
+	{
+		"key": "y",
+		"code": "KeyY",
+		"caps": "Y",
+		"shift": "Y"
+	},
+	{
+		"key": "u",
+		"code": "KeyU",
+		"caps": "U",
+		"shift": "U"
+	},
+	{
+		"key": "i",
+		"code": "KeyI",
+		"caps": "I",
+		"shift": "I"
+	},
+	{
+		"key": "o",
+		"code": "KeyO",
+		"caps": "O",
+		"shift": "O"
+	},
+	{
+		"key": "p",
+		"code": "KeyP",
+		"caps": "P",
+		"shift": "P"
+	},
+	{
+		"key": "[",
+		"code": "BracketLeft",
+		"shift": "{"
+	},
+	{
+		"key": "]",
+		"code": "BracketRight",
+		"shift": "}"
+	},
+	{
+		"key": "\\",
+		"code": "Backslash",
+		"shift": "|"
+	},
+	{
+		"key": "Delete",
+		"code": "Delete"
+	},
+	{
+		"key": "CapsLock",
+		"code": "CapsLock"
+	},
+	{
+		"key": "a",
+		"code": "KeyA",
+		"caps": "A",
+		"shift": "A"
+	},
+	{
+		"key": "s",
+		"code": "KeyS",
+		"caps": "S",
+		"shift": "S"
+	},
+	{
+		"key": "d",
+		"code": "KeyD",
+		"caps": "D",
+		"shift": "D"
+	},
+	{
+		"key": "f",
+		"code": "KeyF",
+		"caps": "F",
+		"shift": "F"
+	},
+	{
+		"key": "g",
+		"code": "KeyG",
+		"caps": "G",
+		"shift": "G"
+	},
+	{
+		"key": "h",
+		"code": "KeyH",
+		"caps": "H",
+		"shift": "H"
+	},
+	{
+		"key": "j",
+		"code": "KeyJ",
+		"caps": "J",
+		"shift": "J"
+	},
+	{
+		"key": "k",
+		"code": "KeyK",
+		"caps": "K",
+		"shift": "K"
+	},
+	{
+		"key": "l",
+		"code": "KeyL",
+		"caps": "L",
+		"shift": "L"
+	},
+	{
+		"key": ";",
+		"code": "Semicolon",
+		"shift": ":"
+	},
+	{
+		"key": "'",
+		"code": "Quote",
+		"shift": "\""
+	},
+	{
+		"key": "Enter",
+		"code": "Enter"
+	},
+	{
+		"key": "Shift",
+		"code": "ShiftLeft"
+	},
+	{
+		"key": "z",
+		"code": "KeyZ",
+		"caps": "Z",
+		"shift": "Z"
+	},
+	{
+		"key": "x",
+		"code": "KeyX",
+		"caps": "X",
+		"shift": "X"
+	},
+	{
+		"key": "c",
+		"code": "KeyC",
+		"caps": "C",
+		"shift": "C"
+	},
+	{
+		"key": "v",
+		"code": "KeyV",
+		"caps": "V",
+		"shift": "V"
+	},
+	{
+		"key": "b",
+		"code": "KeyB",
+		"caps": "B",
+		"shift": "B"
+	},
+	{
+		"key": "n",
+		"code": "KeyN",
+		"caps": "N",
+		"shift": "N"
+	},
+	{
+		"key": "m",
+		"code": "KeyM",
+		"caps": "M",
+		"shift": "M"
+	},
+	{
+		"key": ",",
+		"code": "Comma",
+		"shift": "<"
+	},
+	{
+		"key": ".",
+		"code": "Period",
+		"shift": ">"
+	},
+	{
+		"key": "/",
+		"code": "Slash",
+		"shift": "?"
+	},
+	{
+		"key": "&#9650;",
+		"code": "ArrowUp"
+	},
+	{
+		"key": "Shift",
+		"code": "ShiftRight"
+	},
+	{
+		"key": "Control",
+		"code": "ControlLeft"
+	},
+	{
+		"key": "Meta",
+		"code": "MetaLeft"
+	},
+	{
+		"key": "Alt",
+		"code": "AltLeft"
+	},
+	{
+		"key": " ",
+		"code": "Space"
+	},
+	{
+		"key": "Alt",
+		"code": "AltRight"
+	},
+	{
+		"key": "Meta",
+		"code": "MetaRight"
+	},
+	{
+		"key": "Control",
+		"code": "ControlRight"
+	},
+	{
+		"key": "&#9658;",
+		"code": "ArrowLeft"
+	},
+	{
+		"key": "&#9660;",
+		"code": "ArrowDown"
+	},
+	{
+		"key": "&#9658;",
+		"code": "ArrowRight"
+	}
+]
