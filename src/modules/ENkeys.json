@@ -1,67 +1,81 @@
 [
 	{
 		"key": "`",
-		"code": "Backquote"
+		"code": "Backquote",
+		"shift": "~",
+		"shiftCaps": "~"
 	},
 	{
 		"key": "1",
 		"code": "Digit1",
-		"shift": "!"
+		"shift": "!",
+		"shiftCaps": "!"
 	},
 	{
 		"key": "2",
 		"code": "Digit2",
-		"shift": "@"
+		"shift": "@",
+		"shiftCaps": "@"
 	},
 	{
 		"key": "3",
 		"code": "Digit3",
-		"shift": "#"
+		"shift": "#",
+		"shiftCaps": "#"
 	},
 	{
 		"key": "4",
 		"code": "Digit4",
-		"shift": "$"
+		"shift": "$",
+		"shiftCaps": "$"
 	},
 	{
 		"key": "5",
 		"code": "Digit5",
-		"shift": "%"
+		"shift": "%",
+		"shiftCaps": "%"
 	},
 	{
 		"key": "6",
 		"code": "Digit6",
-		"shift": "^"
+		"shift": "^",
+		"shiftCaps": "^"
 	},
 	{
 		"key": "7",
 		"code": "Digit7",
-		"shift": "&"
+		"shift": "&",
+		"shiftCaps": "&"
 	},
 	{
 		"key": "8",
 		"code": "Digit8",
-		"shift": "*"
+		"shift": "*",
+		"shiftCaps": "*"
 	},
 	{
 		"key": "9",
 		"code": "Digit9",
-		"shift": "("
+		"shift": "(",
+		"shiftCaps": "("
 	},
 	{
 		"key": "0",
 		"code": "Digit0",
-		"shift": ")"
+		"shift": ")",
+		"shiftCaps": ")"
 	},
 	{
 		"key": "-",
 		"code": "Minus",
-		"shift": "_"
+		"shift": "_",
+		"shiftCaps": "_"
 	},
 	{
 		"key": "=",
 		"code": "Equal",
-		"shift": "+"
+		"shift": "+",
+		"shiftCaps": "+"
 	},
 	{
 		"key": "Backspace",
@@ -75,76 +89,89 @@
 		"key": "q",
 		"code": "KeyQ",
 		"caps": "Q",
-		"shift": "Q"
+		"shift": "Q",
+		"shiftCaps": "q"
 	},
 	{
 		"key": "w",
 		"code": "KeyW",
 		"caps": "W",
-		"shift": "W"
+		"shift": "W",
+		"shiftCaps": "w"
 	},
 	{
 		"key": "e",
 		"code": "KeyE",
 		"caps": "E",
-		"shift": "E"
+		"shift": "E",
+		"shiftCaps": "e"
 	},
 	{
 		"key": "r",
 		"code": "KeyR",
 		"caps": "R",
-		"shift": "R"
+		"shift": "R",
+		"shiftCaps": "r"
 	},
 	{
 		"key": "t",
 		"code": "KeyT",
 		"caps": "T",
-		"shift": "T"
+		"shift": "T",
+		"shiftCaps": "t"
 	},
 	{
 		"key": "y",
 		"code": "KeyY",
 		"caps": "Y",
-		"shift": "Y"
+		"shift": "Y",
+		"shiftCaps": "y"
 	},
 	{
 		"key": "u",
 		"code": "KeyU",
 		"caps": "U",
-		"shift": "U"
+		"shift": "U",
+		"shiftCaps": "u"
 	},
 	{
 		"key": "i",
 		"code": "KeyI",
 		"caps": "I",
-		"shift": "I"
+		"shift": "I",
+		"shiftCaps": "i"
 	},
 	{
 		"key": "o",
 		"code": "KeyO",
 		"caps": "O",
-		"shift": "O"
+		"shift": "O",
+		"shiftCaps": "o"
 	},
 	{
 		"key": "p",
 		"code": "KeyP",
 		"caps": "P",
-		"shift": "P"
+		"shift": "P",
+		"shiftCaps": "p"
 	},
 	{
 		"key": "[",
 		"code": "BracketLeft",
-		"shift": "{"
+		"shift": "{",
+		"shiftCaps": "{"
 	},
 	{
 		"key": "]",
 		"code": "BracketRight",
-		"shift": "}"
+		"shift": "}",
+		"shiftCaps": "}"
 	},
 	{
 		"key": "\\",
 		"code": "Backslash",
-		"shift": "|"
+		"shift": "|",
+		"shiftCaps": "|"
 	},
 	{
 		"key": "Del",
@@ -158,65 +185,76 @@
 		"key": "a",
 		"code": "KeyA",
 		"caps": "A",
-		"shift": "A"
+		"shift": "A",
+		"shiftCaps": "a"
 	},
 	{
 		"key": "s",
 		"code": "KeyS",
 		"caps": "S",
-		"shift": "S"
+		"shift": "S",
+		"shiftCaps": "s"
 	},
 	{
 		"key": "d",
 		"code": "KeyD",
 		"caps": "D",
-		"shift": "D"
+		"shift": "D",
+		"shiftCaps": "d"
 	},
 	{
 		"key": "f",
 		"code": "KeyF",
 		"caps": "F",
-		"shift": "F"
+		"shift": "F",
+		"shiftCaps": "f"
 	},
 	{
 		"key": "g",
 		"code": "KeyG",
 		"caps": "G",
-		"shift": "G"
+		"shift": "G",
+		"shiftCaps": "g"
 	},
 	{
 		"key": "h",
 		"code": "KeyH",
 		"caps": "H",
-		"shift": "H"
+		"shift": "H",
+		"shiftCaps": "h"
 	},
 	{
 		"key": "j",
 		"code": "KeyJ",
 		"caps": "J",
-		"shift": "J"
+		"shift": "J",
+		"shiftCaps": "j"
 	},
 	{
 		"key": "k",
 		"code": "KeyK",
 		"caps": "K",
-		"shift": "K"
+		"shift": "K",
+		"shiftCaps": "k"
 	},
 	{
 		"key": "l",
 		"code": "KeyL",
 		"caps": "L",
-		"shift": "L"
+		"shift": "L",
+		"shiftCaps": "l"
 	},
 	{
 		"key": ";",
 		"code": "Semicolon",
-		"shift": ":"
+		"shift": ":",
+		"shiftCaps": ":"
 	},
 	{
 		"key": "'",
 		"code": "Quote",
-		"shift": "\""
+		"shift": "\"",
+		"shiftCaps": "\""
 	},
 	{
 		"key": "Enter",
@@ -230,58 +268,68 @@
 		"key": "z",
 		"code": "KeyZ",
 		"caps": "Z",
-		"shift": "Z"
+		"shift": "Z",
+		"shiftCaps": "z"
 	},
 	{
 		"key": "x",
 		"code": "KeyX",
 		"caps": "X",
-		"shift": "X"
+		"shift": "X",
+		"shiftCaps": "x"
 	},
 	{
 		"key": "c",
 		"code": "KeyC",
 		"caps": "C",
-		"shift": "C"
+		"shift": "C",
+		"shiftCaps": "c"
 	},
 	{
 		"key": "v",
 		"code": "KeyV",
 		"caps": "V",
-		"shift": "V"
+		"shift": "V",
+		"shiftCaps": "v"
 	},
 	{
 		"key": "b",
 		"code": "KeyB",
 		"caps": "B",
-		"shift": "B"
+		"shift": "B",
+		"shiftCaps": "b"
 	},
 	{
 		"key": "n",
 		"code": "KeyN",
 		"caps": "N",
-		"shift": "N"
+		"shift": "N",
+		"shiftCaps": "n"
 	},
 	{
 		"key": "m",
 		"code": "KeyM",
 		"caps": "M",
-		"shift": "M"
+		"shift": "M",
+		"shiftCaps": "m"
 	},
 	{
 		"key": ",",
 		"code": "Comma",
-		"shift": "<"
+		"shift": "<",
+		"shiftCaps": "<"
 	},
 	{
 		"key": ".",
 		"code": "Period",
-		"shift": ">"
+		"shift": ">",
+		"shiftCaps": ">"
 	},
 	{
 		"key": "/",
 		"code": "Slash",
-		"shift": "?"
+		"shift": "?",
+		"shiftCaps": "?"
 	},
 	{
 		"key": "&#9650;",
