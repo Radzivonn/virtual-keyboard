@@ -78,10 +78,6 @@ body {
 	}
 }
 
-.active {
-	display: flex;
-}
-
 .hidden {
 	display: none;
 }
@@ -93,7 +89,6 @@ span {
 	justify-content: center;
 	align-items: center;
 }
-
 
 #Backquote,
 #Backspace,
@@ -118,7 +113,6 @@ span {
 		background-color: rgb(100, 100, 100);
 	}
 }
-
 
 #Backspace,
 #CapsLock,
