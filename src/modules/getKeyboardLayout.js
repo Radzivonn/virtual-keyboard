@@ -4,7 +4,7 @@ export const getKeyboardLayout = (ENkeys, RUkeys) => {
 		const RUkey = RUkeys[i];
 		layoutString +=
 			`<div class="keyboard__key" id="${ENkey.code}">
-					<span class="ru hidden"> 
+					<span class="ru"> 
 						<span class="caseDown">${RUkey.key}</span>
 						<span class="caseUp hidden">${RUkey.shift ? RUkey.shift : RUkey.key}</span>
 						<span class="caps hidden">${RUkey.caps ? RUkey.caps : RUkey.key}</span>
@@ -17,7 +17,6 @@ export const getKeyboardLayout = (ENkeys, RUkeys) => {
 						<span class="shiftCaps hidden">${ENkey.shiftCaps ? ENkey.shiftCaps : ENkey.key}</span>
 					</span>
 			</div>`;
-		// if(key.shift) layoutString += `<div class="keyboard__key upperCase" id="${key.shift}">${key.shift}</div>`;
 		if (ENkey.code === 'Backspace' || ENkey.code === 'Delete' || ENkey.code === 'Enter' || ENkey.code === 'ShiftRight' || ENkey.code === 'ControlRight')
 			layoutString += '</div><div class="keyboard__row">'
 	});
