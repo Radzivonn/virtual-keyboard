@@ -7,14 +7,25 @@ export default class Keyboard {
 		this.enKeys = document.querySelectorAll('.en');
 		this.caseDownKeys = document.querySelectorAll('.caseDown');
 		this.caseUpKeys = document.querySelectorAll('.caseUp');
-		this.capsLetters = document.querySelectorAll('.caps');
+		this.capsKeys = document.querySelectorAll('.caps');
+		this.shiftCapsKeys = document.querySelectorAll('.shiftCaps');
 		this.textAreaContent = '';
 		this.lang = 'en';
-		this.case = 'Down';
+		this.state = 'caseDown';
+		this.functionalKeys = [
+			'Space', 'Backspace', 'CapsLock',
+			'ShiftLeft', 'ShiftRight', 'Enter',
+			'Tab', 'Delete', 'MetaLeft',
+			'AltLeft', 'AltRight',
+			'ControlLeft', 'ControlRight',
+			'ArrowRight', 'ArrowLeft',
+			'ArrowDown', 'ArrowUp'
+		];
 	}
 
-	addMouseListeners() {
+	addListeners() {
 		this.keyboardNode.addEventListener('mousedown', e => {
+			e.preventDefault();
 			const clickedSymbol = e.target;
 			const clickedButton = clickedSymbol.closest('.keyboard__key');
 			if (clickedButton) {
@@ -29,14 +40,29 @@ export default class Keyboard {
 			}
 		});
 
-		this.textArea.addEventListener('focusout', e => e.target.focus());
+		document.addEventListener('keydown', e => {
+			e.preventDefault();
+			const clickedButton = document.getElementById(`${e.code}`);
+			clickedButton.classList.add('active');
+			this.keyboardAction('down', clickedButton, clickedButton.querySelector(`.${this.lang} .${this.state}`));
+		});
+
+		document.addEventListener('keyup', e => {
+			const clickedButton = document.getElementById(`${e.code}`);
+			clickedButton.classList.remove('active');
+			this.keyboardAction('up', clickedButton, clickedButton.querySelector(`.${this.lang} .${this.state}`));
+		});
+
+		// this.textArea.addEventListener('focusout', e => console.log(e.target));
 	}
 
 	keyboardAction(event, ButtonPressed, keyPressed) {
 		if (event === 'down') {
+			let caretPos = this.textArea.selectionStart;
 			switch (ButtonPressed.id) {
 				case 'Backspace':
-					this.textAreaContent = this.textAreaContent.slice(0, -1)
+					caretPos -= 1;
+					this.textAreaContent = this.textAreaContent.replace(this.textAreaContent.slice(this.textArea.selectionStart - 1, this.textArea.selectionStart), '')
 					break;
 				case 'Delete':
 					this.textAreaContent = this.textAreaContent.replace(this.textAreaContent.slice(this.textArea.selectionStart, this.textArea.selectionStart + 1), '')
@@ -48,38 +74,79 @@ export default class Keyboard {
 					this.textAreaContent += '\n';
 					break;
 				case 'CapsLock':
-					this.isCaps();
+					this.caps();
 					break;
 				default:
-					if (ButtonPressed.id === 'ShiftRight' || ButtonPressed.id === 'ShiftLeft') this.caseUp();
-					else this.textAreaContent += keyPressed.textContent;
+					if (this.state === 'caps' && (ButtonPressed.id === 'ShiftRight' || ButtonPressed.id === 'ShiftLeft')) {
+						this.shiftCaps();
+					}
+					else if (this.state !== 'caps' && (ButtonPressed.id === 'ShiftRight' || ButtonPressed.id === 'ShiftLeft')) {
+						this.shiftDown();
+					}
+					else if (!this.functionalKeys.includes(ButtonPressed.id)) {
+						this.textAreaContent += keyPressed.textContent;
+						caretPos = this.textAreaContent.length;
+					}
 			}
 			this.textArea.textContent = this.textAreaContent;
+			this.textArea.selectionStart = caretPos;
 		} else if (event === 'up') {
 			if (ButtonPressed.id === 'ShiftRight' || ButtonPressed.id === 'ShiftLeft') {
-				this.caseDown();
+				this.shiftUp();
 			}
+		}
+		console.log(this.state);
+	}
+
+	/* hide all keys */
+	offAllKeys() {
+		this.caseDownKeys.forEach(elem => elem.classList.add('hidden'));
+		this.caseUpKeys.forEach(elem => elem.classList.add('hidden'));
+		this.capsKeys.forEach(elem => elem.classList.add('hidden'));
+		this.shiftCapsKeys.forEach(elem => elem.classList.add('hidden'));
+	}
+
+		/* calls when shift Downs */
+	shiftDown() {
+		if (this.state !== 'shiftCaps') {
+			this.offAllKeys();
+			this.caseUpKeys.forEach(elem => elem.classList.remove('hidden'));
+			this.state = 'caseUp';
 		}
 	}
 
-	caseUp() {
-		this.capsLetters.forEach(elem => elem.classList.add('hidden'));
-		this.caseUpKeys.forEach(elem => elem.classList.remove('hidden'));
-		this.caseDownKeys.forEach(elem => elem.classList.add('hidden'));
-		this.case = 'up';
+	/* calls when shift Ups */
+	shiftUp() {
+		this.caseUpKeys.forEach(elem => elem.classList.add('hidden'));
+		if (this.state === 'shiftCaps') {
+			this.state = 'caps';
+			this.capsKeys.forEach(elem => elem.classList.remove('hidden'));
+			this.shiftCapsKeys.forEach(elem => elem.classList.add('hidden'));
+		}
+		else {
+			this.caseDownKeys.forEach(elem => elem.classList.remove('hidden'));
+			this.state = 'caseDown';
+		}
 	}
 
-	caseDown() {
-		this.capsLetters.forEach(elem => elem.classList.add('hidden'));
-		this.caseUpKeys.forEach(elem => elem.classList.add('hidden'));
-		this.caseDownKeys.forEach(elem => elem.classList.remove('hidden'));
-		this.case = 'down';
+	/* calls when CapsLock clicked */
+	caps() {
+		this.offAllKeys();
+		if (this.state !== 'caps') {
+			this.capsKeys.forEach(elem => elem.classList.remove('hidden'));
+			this.state = 'caps';
+		} else {
+			this.state = 'caseDown';
+			this.caseDownKeys.forEach(elem => elem.classList.remove('hidden'));
+		}
 	}
 
-	isCaps() {
-		this.capsLetters.forEach(elem => elem.classList.toggle('hidden'));
-		this.caseUpKeys.forEach(elem => elem.classList.add('hidden'));
-		this.caseDownKeys.forEach(elem => elem.classList.toggle('hidden'));
-		this.case = 'up';
+	/* calls when CapsLock and shift clicked */
+	shiftCaps() {
+		if (this.state !== 'shiftCaps') {
+			this.offAllKeys();
+			this.shiftCapsKeys.forEach(elem => elem.classList.remove('hidden'));
+			this.state = 'shiftCaps';
+		}
 	}
 }
