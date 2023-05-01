@@ -10,7 +10,11 @@ export default class Keyboard {
 		this.capsKeys = document.querySelectorAll('.caps');
 		this.shiftCapsKeys = document.querySelectorAll('.shiftCaps');
 		this.textAreaContent = '';
-		this.lang = 'en';
+		this.lang = localStorage.getItem("lang") ? localStorage.getItem("lang") : 'en';
+
+		if (this.lang === 'en') this.ruKeys.forEach(elem => elem.classList.add('hidden'))
+		else this.enKeys.forEach(elem => elem.classList.add('hidden'));
+		
 		this.state = 'caseDown';
 		this.functionalKeys = [
 			'Space', 'Backspace', 'CapsLock',
@@ -41,10 +45,11 @@ export default class Keyboard {
 		});
 
 		document.addEventListener('keydown', e => {
+			console.log(e);
 			e.preventDefault();
 			const clickedButton = document.getElementById(`${e.code}`);
 			clickedButton.classList.add('active');
-			this.keyboardAction('down', clickedButton, clickedButton.querySelector(`.${this.lang} .${this.state}`));
+			this.keyboardAction('down', clickedButton, clickedButton.querySelector(`.${this.lang} .${this.state}`), e);
 		});
 
 		document.addEventListener('keyup', e => {
@@ -52,11 +57,9 @@ export default class Keyboard {
 			clickedButton.classList.remove('active');
 			this.keyboardAction('up', clickedButton, clickedButton.querySelector(`.${this.lang} .${this.state}`));
 		});
-
-		// this.textArea.addEventListener('focusout', e => console.log(e.target));
 	}
 
-	keyboardAction(event, ButtonPressed, keyPressed) {
+	keyboardAction(event, ButtonPressed, keyPressed, keyEventObject) {
 		if (event === 'down') {
 			let caretPos = this.textArea.selectionStart;
 			switch (ButtonPressed.id) {
@@ -83,6 +86,11 @@ export default class Keyboard {
 					else if (this.state !== 'caps' && (ButtonPressed.id === 'ShiftRight' || ButtonPressed.id === 'ShiftLeft')) {
 						this.shiftDown();
 					}
+					else if (
+						(ButtonPressed.id === 'AltLeft' && keyEventObject.ctrlKey === true) ||
+						(ButtonPressed.id === 'ControlLeft') && keyEventObject.altKey === true)
+							this.changeLanguage();
+
 					else if (!this.functionalKeys.includes(ButtonPressed.id)) {
 						this.textAreaContent += keyPressed.textContent;
 						caretPos = this.textAreaContent.length;
@@ -95,7 +103,19 @@ export default class Keyboard {
 				this.shiftUp();
 			}
 		}
-		console.log(this.state);
+	}
+
+	changeLanguage() {
+		if (this.lang === 'en') {
+			this.enKeys.forEach(elem => elem.classList.add('hidden'));
+			this.ruKeys.forEach(elem => elem.classList.remove('hidden'));
+			this.lang = 'ru';
+		} else {
+			this.enKeys.forEach(elem => elem.classList.remove('hidden'));
+			this.ruKeys.forEach(elem => elem.classList.add('hidden'));
+			this.lang = 'en';
+		}
+		localStorage.setItem("lang", this.lang);
 	}
 
 	/* hide all keys */
