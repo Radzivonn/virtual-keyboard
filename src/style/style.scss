@@ -70,12 +70,15 @@ body {
 	&:hover {
 		background-color: rgb(90, 87, 87);
 	}
-	&:active {
-		transform: scale(0.96);
-		-webkit-box-shadow: none;
-		-moz-box-shadow: none;
-		box-shadow: none;
-	}
+}
+
+.keyboard__key:active,
+.active {
+	transform: scale(0.96);
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	color: rgb(0, 255, 85);
 }
 
 .hidden {
@@ -132,4 +135,11 @@ span {
 
 #Space {
 	width: 330px;
+}
+
+.keyboard-info {
+	font-size: 16px;
+	text-align: center;
+	margin-top: 20px;
+	line-height: 22px;
 }
