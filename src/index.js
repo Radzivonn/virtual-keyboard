@@ -7,14 +7,20 @@ import Keyboard from './modules/keyboardClass';
 
 const body = document.querySelector('body');
 
-// 
+/* init HTML layout */
 body.insertAdjacentHTML('afterbegin', getDefaultLayout());
 const wrapper = document.querySelector('.wrapper');
 wrapper.insertAdjacentHTML('beforeend', getKeyboardLayout(ENkeys, RUkeys));
-wrapper.insertAdjacentHTML('beforeend', '<p> Клавиатура создана в операционной системе Windows <br> Для переключения языка комбинация: левыe ctrl + alt</p>');
+wrapper.insertAdjacentHTML('beforeend',
+	`<p class="keyboard-info"> 
+		Клавиатура создана в операционной системе Windows
+		<br> Для переключения языка комбинация:
+		левыe ctrl + alt</p>`
+);
+/* init HTML layout */
 
+/* init keyboard object */
 const keyboardObject = new Keyboard(document.querySelector('.keyboard'));
 
-console.log(keyboardObject);
-
-keyboardObject.addMouseListeners();
+/* add listeners to keyboard */
+keyboardObject.addListeners();
