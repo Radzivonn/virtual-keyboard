@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+@font-face{font-family:Roboto;font-display:swap;src:url(assets/160d7a6ac26376e5e977.ttf) format("ttf");font-weight:400;font-style:normal}body{overflow:hidden}.wrapper{display:flex;flex-direction:column;justify-content:space-between;width:715px;margin:50px auto;font-family:"Roboto",sans-serif}.main-header{text-align:center;font-size:40px;font-weight:600;font-style:italic}.text-area{width:80%;height:220px;border:2px solid #3c3c3c;margin:50px auto;border-radius:5px;font-size:26px}.text-area:focus{border:3px solid #000}.keyboard{width:100%;height:260px;background-color:#292929;margin:0 auto;border:5px solid #000;border-radius:5px;display:flex;flex-direction:column;gap:10px;padding:5px;font-size:18px;color:#c8c8c8}.keyboard__row{width:100%;display:flex;justify-content:space-between}.keyboard__key{width:40px;height:40px;display:flex;align-items:center;justify-content:center;background-color:#3c3c3c;-webkit-box-shadow:0 3px 3px rgba(0,0,0,.5);-moz-box-shadow:0 3px 3px rgba(0,0,0,.5);box-shadow:0 3px 3px rgba(0,0,0,.5);border-radius:5px;transition:all .3s ease 0s;cursor:pointer}.keyboard__key:hover{background-color:#5a5757}.keyboard__key:active,.active{transform:scale(0.96);-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;color:#0f5}.hidden{display:none}span{display:flex;width:100%;height:inherit;justify-content:center;align-items:center}#Backquote,#Backspace,#CapsLock,#ShiftLeft,#ShiftRight,#Enter,#Tab,#Delete,#Backslash,#MetaLeft,#AltLeft,#AltRight,#ControlLeft,#ControlRight,#ArrowRight,#ArrowLeft,#ArrowDown,#ArrowUp{background-color:#535353}#Backquote:hover,#Backspace:hover,#CapsLock:hover,#ShiftLeft:hover,#ShiftRight:hover,#Enter:hover,#Tab:hover,#Delete:hover,#Backslash:hover,#MetaLeft:hover,#AltLeft:hover,#AltRight:hover,#ControlLeft:hover,#ControlRight:hover,#ArrowRight:hover,#ArrowLeft:hover,#ArrowDown:hover,#ArrowUp:hover{background-color:#646464}#Backspace,#CapsLock,#ShiftLeft{width:100px}#Enter,#ShiftRight{width:85px}#Tab,#Delete{width:50px}#Space{width:330px}.keyboard-info{font-size:16px;text-align:center;margin-top:20px;line-height:22px}
