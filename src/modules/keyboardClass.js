@@ -22,8 +22,6 @@ export default class Keyboard {
       'Tab', 'Delete', 'MetaLeft',
       'AltLeft', 'AltRight',
       'ControlLeft', 'ControlRight',
-      'ArrowRight', 'ArrowLeft',
-      'ArrowDown', 'ArrowUp',
     ];
   }
 
