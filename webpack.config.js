@@ -25,7 +25,7 @@ module.exports = ({ development }) => ({
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'assets/[hash][ext]',
-  },
+	},
   module: {
 		rules: [
 			{
@@ -47,7 +47,7 @@ module.exports = ({ development }) => ({
       {
         test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
-      }
+			}
     ],
   },
   plugins: [
