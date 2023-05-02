@@ -17,7 +17,7 @@ export default class Keyboard {
 
     this.state = 'caseDown';
     this.functionalKeys = [
-      'Space', 'Backspace', 'CapsLock',
+      'Backspace', 'CapsLock',
       'ShiftLeft', 'ShiftRight', 'Enter',
       'Tab', 'Delete', 'MetaLeft',
       'AltLeft', 'AltRight',
