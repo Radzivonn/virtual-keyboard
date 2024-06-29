@@ -3,7 +3,7 @@ import ENkeys from './keys-data/ENkeys.json';
 import RUkeys from './keys-data/RUkeys.json';
 import getDefaultLayout from './modules/getDefaultLayout';
 import getKeyboardLayout from './modules/getKeyboardLayout';
-import Keyboard from './modules/keyboardClass';
+import Keyboard from './modules/keyboardController';
 
 const body = document.querySelector('body');
 
