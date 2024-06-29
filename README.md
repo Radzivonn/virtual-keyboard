@@ -1,9 +1,10 @@
 # Virtual Keyboard
 
+![image](https://github.com/Radzivonn/virtual-keyboard/assets/106487154/6d4e653a-3df4-4644-8323-c43203f631f7)
+
 ### Functional:
 
 - if several buttons are pressed, all the pressed buttons are highlighted on the virtual keyboard (there're no exceptions for `Ctrl`, `Alt` and `Shift` as well)
-  ![screenshot](images/virtual-keyboard-2.png)
 - the virtual keyboard is able to switch between two language layouts (English + any other language).
   - assigning a keyboard shortcut for switching keyboard layout is up to you.
   - the buttons on the virtual keyboard display symbols of a selected language
@@ -18,3 +19,5 @@
   - the `Backspace` key removes character before the text cursor
   - the `Del` key removes character after the text cursor
   - the `Shift`, `Alt`, `Ctrl`, `Caps lock` and `Space` keys should work as on a real keyboard
+
+*Written in vanilla js*
